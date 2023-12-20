@@ -33,7 +33,9 @@ const Profile = () => {
       </nav>
       <div>
         {user ? (
-          <p>Welcome, {user.userName}!</p>
+          <p>
+            Welcome, {user.userName}!{user.email}
+          </p>
         ) : (
           <p>Loading user information...</p>
         )}

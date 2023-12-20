@@ -30,8 +30,9 @@ router.post("/", async (req, res) => {
 
 router.get("/", (req, res) => {
   const userName = req.body.userName; 
+  const email = req.body.email; 
 
-  const user = user[userName];
+  const user = user[userName, email];
   res.json(user);
 });
 
