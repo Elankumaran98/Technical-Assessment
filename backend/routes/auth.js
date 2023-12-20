@@ -28,6 +28,13 @@ router.post("/", async (req, res) => {
   }
 });
 
+router.get("/", (req, res) => {
+  const userName = req.body.userName; 
+
+  const user = user[userName];
+  res.json(user);
+});
+
 const validate = (data) => {
   const schema = Joi.object({
     email: Joi.string().email().required().label("Email"),
